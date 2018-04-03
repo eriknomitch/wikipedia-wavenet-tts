@@ -6,7 +6,7 @@ import sys
 
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = './credentials.json'
 
-def synthesize_from_wikipedia(url_or_title, voice_suffix='F'):
+def synthesize_from_wikipedia(url_or_title, voice_suffix='C'):
     """Synthesizes speech from the a Wikipedia URL or title."""
 
     import wikipedia
