@@ -3,7 +3,7 @@
 import argparse
 import os
 import sys
-#import vlc
+import vlc
 import wikipedia
 from google.cloud import texttospeech
 
@@ -34,15 +34,15 @@ def synthesize_from_wikipedia(url_or_title, voice_suffix='C'):
         out.write(response.audio_content)
         print('Wikipedia synthesis written to file "output.mp3"')
 
-    from pygame import mixer
+    # from pygame import mixer
 
-    mixer.init()
-    mixer.music.load(output_path)
-    mixer.music.play()
+    # mixer.init()
+    # mixer.music.load(output_path)
+    # mixer.music.play()
 
-    # player = vlc.MediaPlayer(f"file://{output_path}")
+    player = vlc.MediaPlayer(f"file://{output_path}")
 
-    # player.play()
+    player.play()
 
 # ================================================
 # MAIN ===========================================
